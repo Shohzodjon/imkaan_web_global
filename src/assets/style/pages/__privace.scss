@@ -1,0 +1,25 @@
+@use '../variable.scss' as *;
+@use '../mixin.scss' as *;
+
+.privace__page {
+    background: #fff;
+    padding: 190px 0 100px;
+
+    h2 {
+        @include sectionTitle($dark-blue);
+    }
+
+    @media (max-width:$md) {
+        padding: 130px 0 80px;
+    }
+
+    @media (max-width:$xs) {
+        padding: 120px 0 40px;
+    }
+}
+
+.rtl {
+    h2 {
+        text-align: right;
+    }
+}

@@ -1,0 +1,157 @@
+@use '../variable.scss' as *;
+@use '../mixin.scss' as *;
+
+.travel {
+    padding: 100px 0 10px;
+    background: url(@/assets/images/2023/12/travel_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 130%;
+    background-position: top;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: $dark-blue;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0.7;
+    }
+
+    .container {
+        position: relative;
+        z-index: 10;
+    }
+
+    h4 {
+        @include subTitle($blue-800);
+        text-align: center;
+    }
+
+    h2 {
+        @include title(#fff);
+        margin: 8px 0 16px;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+
+    &__img {
+        width: 900px;
+        height: 470px;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img_1 {
+            display: block;
+        }
+        .img_3 {
+            display: none;
+        }
+        .img_4{
+            display: none;
+        }
+    }
+
+    @media (max-width:$lg) {
+        padding: 90px 0 10px;
+        background-size: 100% 120%;
+
+        &__img {
+            width: 90%;
+            height: 460px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+    @media (max-width:$md) {
+
+        &__img {
+            width: 96%;
+            height: 460px;
+        }
+    }
+
+    @media (max-width:860px) {
+        &__img {
+            width: 100%;
+            height: 460px;
+        }
+    }
+
+    @media (max-width:$xs) {
+        &__img {
+            width: 100%;
+            max-width: 600px;
+            height: 410px;
+            overflow: hidden;
+
+            .img_1 {
+                display: none;
+            }
+
+            .img_3 {
+                display: block;
+                width: 100%;
+                height: 140%;
+                margin-top: -100px;
+            }
+        }
+    }
+
+    @media (max-width:550px) {
+        &__img {
+            max-width: 600px;
+            height: 300px;
+            overflow: hidden;
+
+            .img_1 {
+                display: none;
+            }
+            .img_3 {
+                display: none;
+            }
+            .img_4{
+                width: 95%;
+                height:150%;
+                margin-top: -70px;
+                display: block;
+            }
+        }
+    }
+    @media (max-width:500px) {
+        &__img {
+
+            .img_1 {
+                display: none;
+            }
+
+            .img_3 {
+                display: none;
+            }
+            .img_4 {
+                width: 100%;
+                height: 130%;
+                margin-top: -30px;
+            }
+        }
+    }
+}

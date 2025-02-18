@@ -1,0 +1,608 @@
+@use '../mixin.scss' as *;
+@use '../variable.scss' as *;
+
+
+.service__page {
+
+    header {
+        padding: 200px 0 120px;
+        background: url(@/assets/images/2023/12/service_bg.jpg);
+        height: 450px !important;
+        background-repeat: no-repeat;
+        background-position: center, center;
+        background-size: cover;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            background: $dark-blue;
+            width: 100% !important;
+            height: 100% !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        h2 {
+            @include title(#fff);
+            text-align: center;
+        }
+    }
+
+    .service__grid {
+        padding: 100px 0;
+
+        .sub__title {
+            @include subTitle($blue-800);
+            text-align: center;
+        }
+
+        .title {
+            @include title($dark-blue);
+            margin: 8px 0 16px;
+            text-align: center;
+        }
+
+        .desc {
+            color: $gray-500;
+            text-align: center;
+            margin-bottom: 14px;
+        }
+
+        .grid {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+    }
+
+    .progress {
+        height: 710px;
+        background: url(@/assets/images/2023/12/progress_left.jpg), url(@/assets/images/2023/12/progress_right.jpg);
+        background-size: 50% 100%, 50% 100%;
+        background-position: left top, right top;
+        background-repeat: no-repeat, no-repeat;
+        /* background-size: 100% 50%; 
+        background-position: top, bottom; 
+        background-repeat: no-repeat; */
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $dark-blue;
+            opacity: 0.8;
+        }
+
+        .container {
+            height: 100%;
+            position: relative;
+        }
+
+        .flex {
+            @include flex(row, center, flex-start);
+            position: relative;
+            height: 100%;
+            z-index: 10;
+
+            .left {
+                width: 50%;
+                padding-right: 40px;
+
+                h4 {
+                    @include subTitle($blue-800);
+                }
+
+                h2 {
+                    @include title(#fff);
+                    margin: 8px 0 16px;
+                    text-wrap-style: balance;
+                }
+
+                p {
+                    font-size: 16px;
+                    margin-bottom: 14px;
+                    color: #fff;
+                }
+            }
+
+            .right {
+                width: 50%;
+
+            }
+
+        }
+
+        .modal {
+            position: absolute;
+            right: 0;
+            bottom: -5%;
+            background: #fff;
+            max-width: 378px;
+            padding: 37px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 14px;
+            z-index: 11;
+
+            h2 {
+                font-size: 22px;
+                font-weight: 500;
+                color: $dark-blue;
+            }
+
+            p {
+                font-size: 16px;
+                color: $gray-500;
+                margin: 15px 0 14px;
+            }
+
+            a {
+                font-size: 16px;
+                color: $blue-800;
+                font-weight: 500;
+                text-decoration: underline;
+            }
+
+        }
+
+    }
+
+    .rtl__progress {
+        background: url(@/assets/images/2023/12/progress_right.jpg), url(@/assets/images/2023/12/progress_left.jpg);
+        background-size: 50% 100%, 50% 100%;
+        background-position: left top, right top;
+        background-repeat: no-repeat, no-repeat;
+
+        &::after {
+            right: 0;
+            top: 0;
+            left: 50%;
+        }
+
+        .flex {
+            @include flex(row-reverse, center, flex-start);
+
+            .left {
+                width: 50%;
+                padding-right: 0;
+                padding-left: 15px;
+
+                h4,
+                h2,
+                p {
+                    text-align: right;
+                }
+            }
+        }
+
+        .modal {
+            left: 0;
+
+            h2,
+            p {
+                text-align: right;
+            }
+
+            a {
+                display: block;
+                text-align: right;
+            }
+
+        }
+    }
+
+    // end of progress
+    .faq {
+        background: #fff;
+        padding: 100px 0;
+
+        &__flex {
+            @include flex(row, center, flex-start);
+            gap: 20px;
+
+            .item__one {
+                width: 100%;
+                max-width: 50%;
+
+                .img__wrapper {
+                    width: 100%;
+                    max-width: 500px;
+                    border-radius: 20px;
+                    margin: 0 auto;
+                    height: 750px;
+                    overflow: hidden;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 750px;
+                    }
+
+                    .modal {
+                        position: absolute;
+                        bottom: 5%;
+                        right: 6%;
+                        width: 100%;
+                        padding: 30px 30px 20px 40px;
+                        background: #fff;
+                        border-radius: 15px;
+                        max-width: 277px;
+
+                        p {
+                            font-size: 17px;
+                            color: $dark-blue;
+                            margin-bottom: 6px;
+                        }
+
+                        a {
+                            font-size: 16px;
+                            color: $blue-800;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            .item__two {
+                padding: 10px;
+                margin-top: 20px;
+                width: 100%;
+                max-width: 50%;
+
+                .sub__title {
+                    @include subTitle($blue-800);
+                    text-align: center;
+                }
+
+                .title {
+                    @include title($dark-blue);
+                    text-align: center;
+                    margin: 8px 0 16px;
+                }
+
+                .desc {
+                    font-size: 16px;
+                    color: $gray-500;
+                    margin-bottom: 40px;
+                }
+
+                .vs-accordion__item {
+                    border: none;
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+                    padding: 10px;
+
+                    .vs-accordion__trigger {
+                        border-radius: 6px;
+                        padding: 14px;
+
+                        button {
+                            h4 {
+                                font-size: 18px;
+                                color: $dark-blue;
+                                font-weight: 500;
+                            }
+                        }
+
+                        svg {
+                            color: $dark-blue !important;
+                            width: 20px;
+                            height: 20px
+                        }
+                    }
+                }
+
+                .vs-accordion__active {
+                    .vs-accordion__trigger {
+                        background: $blue-800;
+
+                        button {
+                            h4 {
+                                color: #fff;
+                            }
+                        }
+
+                        .vs-accordion--icon {
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .faq__rtl {
+        border: 5px solid red;
+
+        .faq__flex {
+            @include flex(row-reverse, center, flex-start);
+
+            .item__one {
+
+                .img__wrapper {
+
+                    .modal {
+
+                        p {
+                            text-align: right;
+                        }
+
+                        a {
+                            display: block;
+                            text-align: right;
+                        }
+
+                    }
+                }
+            }
+
+            .item__two {
+
+                .sub__title,
+                .title,
+                .desc {
+                    text-align: right;
+                }
+
+                .vs-accordion__item {
+
+                    .vs-accordion__trigger {
+                        flex-direction: row-reverse;
+
+                        button {
+                            h4 {
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+
+                .vs-accordion__content-wrapper {
+                    p {
+                        text-align: right;
+                    }
+                }
+
+                .vs-accordion__active {
+                    .vs-accordion__trigger {
+                        background: $blue-800;
+
+                        button {
+                            h4 {
+                                color: #fff;
+                            }
+                        }
+
+                        .vs-accordion--icon {
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // begin media
+
+    @media (max-width:$md) {
+        header {
+            padding: 180px 0 120px;
+            height: 400px !important;
+        }
+
+        // end of header
+
+        .service__grid {
+            padding: 90px 0;
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        // end of  service-grid
+        .progress {
+            height: 800px;
+            padding: 20px 0;
+            background-size: 100% 50%, 100% 50%;
+            background-position: top, bottom;
+            background-repeat: no-repeat, no-repeat;
+
+            &::after {
+                width: 100%;
+                height: 50%;
+            }
+
+
+
+            .flex {
+                @include flex(column, center, flex-start);
+
+                .left {
+                    width: 100%;
+                    padding-right: 0;
+
+                    h4 {
+                        text-align: center;
+                    }
+
+                    h2 {
+                        margin: 8px 0 14px;
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+                }
+
+                .right {
+                    width: 100%;
+                }
+
+            }
+
+            .modal {
+                max-width: 378px;
+                padding: 20px 30px;
+                right: 1%;
+            }
+        }
+
+        .rtl__progress {
+            &::after {
+                right: 0;
+                top: 0;
+                left: 0%;
+            }
+        }
+
+        // end of progress
+        .faq {
+            padding: 90px 0;
+
+            &__flex {
+                @include flex(column, flex-start, flex-start);
+                flex-direction: column !important;
+                gap: 20px;
+
+                .item__one {
+                    max-width: 100%;
+
+                    .img__wrapper {
+                        width: 100%;
+                        max-width: 500px;
+                        height: 700px;
+
+                        img {
+                            width: 100%;
+                            height: 750px;
+                        }
+
+                        .modal {
+                            bottom: 3%;
+                            right: 5%;
+                            padding: 20px 20px;
+                            max-width: 280px;
+                        }
+                    }
+                }
+
+                .item__two {
+                    padding: 0;
+                    max-width: 100%;
+
+                    .desc , .title,.sub__title{
+                        text-align: center !important;
+                    }
+
+                    .vs-accordion__item {
+                        padding: 5px;
+
+                        .vs-accordion__trigger {
+                            padding: 12px;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    @media (max-width:$xs) {
+        header {
+            padding: 180px 0 100px;
+            height: 350px !important;
+        }
+
+        // end of header
+        .service__grid {
+            padding: 70px 0;
+        }
+
+        // end of service-grid
+        .progress {
+            height: 800px;
+            padding: 20px 0;
+
+            .modal {
+                max-width: 360px;
+                padding: 15px 20px;
+                right: 1%;
+
+                h2 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin: 10px 0;
+                }
+
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @media (max-width:$sm) {
+        header {
+            padding: 180px 0 100px;
+            height: 320px !important;
+        }
+
+        // end of header
+        .service__grid {
+            padding: 60px 0;
+
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        // end of grid
+        .faq {
+            padding: 80px 0 60px;
+
+            &__flex {
+                gap: 20px;
+
+                .item__one {
+                    max-width: 100%;
+
+                    .img__wrapper {
+                        width: 100%;
+                        max-width: 450px;
+                        height: 600px;
+
+                        img {
+                            width: 110%;
+                            height: 100%;
+                        }
+
+                        .modal {
+                            bottom: 3%;
+                            right: 5%;
+                            padding: 15px;
+                            max-width: 280px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

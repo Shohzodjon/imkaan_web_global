@@ -1,0 +1,35 @@
+@use '../variable.scss' as *;
+@use '../mixin.scss' as *;
+
+.service__section {
+    h2 {
+        @include title($dark-blue);
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .desc {
+        color: $gray-500;
+        font-size: 16px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .flex {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    @media (max-width:900px) {
+        .flex {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width:$sm) {
+        .flex {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
