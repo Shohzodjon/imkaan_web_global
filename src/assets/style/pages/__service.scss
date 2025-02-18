@@ -324,8 +324,6 @@
     }
 
     .faq__rtl {
-        border: 5px solid red;
-
         .faq__flex {
             @include flex(row-reverse, center, flex-start);
 

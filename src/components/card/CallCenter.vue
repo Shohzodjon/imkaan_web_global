@@ -1,19 +1,21 @@
 <script setup>
-import { useDirection } from '@/stores/direction';
+import { useDirection } from "@/stores/direction";
 
-const directionStore=useDirection();
+const directionStore = useDirection();
 </script>
 <template>
-  <div class="call" :class="directionStore.direct=='rtl'?'rtl':''">
+  <div class="call" :class="directionStore.direct == 'rtl' ? 'rtl' : ''">
     <div class="call__img">
       <img src="@/assets/images/call_center.jpg" alt="call center" />
     </div>
     <div class="call__info">
       <p>{{ $t("callTime") }}</p>
-      <h4>
-        {{ $t("callCenter") }}
+      <div>
+        <span>
+          {{ $t("callCenter") }}
+        </span>
         <a href="tel:+998557021122"> +998 55 702 11 22</a>
-      </h4>
+      </div>
     </div>
   </div>
 </template>
@@ -41,11 +43,14 @@ const directionStore=useDirection();
       color: #6d6d6d;
       margin-bottom: 5px;
     }
-    h4 {
+    div {
       font-size: 23px;
       margin: 8px 0 16px;
       color: #1b2430 !important;
       font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 5px;
       a {
         color: #00b9ff;
       }
@@ -61,7 +66,7 @@ const directionStore=useDirection();
       p {
         font-size: 16px;
       }
-      h4 {
+      div {
         font-size: 22px;
         margin: 8px 0 8px;
       }
@@ -78,19 +83,21 @@ const directionStore=useDirection();
       p {
         font-size: 14px;
       }
-      h4 {
+      div {
         font-size: 20px;
       }
     }
   }
 }
-.rtl{
+.rtl {
   flex-direction: row-reverse;
   .call__info {
-    p ,h4{
+    p {
       text-align: right;
     }
- 
+    div {
+      justify-content: flex-end;
+    }
   }
 }
 </style>
