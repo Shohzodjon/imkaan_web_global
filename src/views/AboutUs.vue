@@ -65,9 +65,7 @@ const directionStore = useDirection();
             </template>
             <template #footer>
               <ul class="payment__list">
-                <li><i class="bi bi-credit-card"></i> <span> UzCard</span></li>
-                <li><i class="bi bi-credit-card"></i> <span>Payme</span></li>
-                <li><i class="bi bi-credit-card"></i> <span>Humo</span></li>
+                <li><i class="bi bi-credit-card"></i> <span> Stripe</span></li>
               </ul>
             </template>
           </InvateCard>

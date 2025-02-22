@@ -4,7 +4,7 @@ import BreadCrumb from "@/components/BreadCrumb.vue";
 import PriceCard from "@/components/card/PriceCard.vue";
 import OrderSection from "@/components/OrderSection.vue";
 import Travel from "@/components/Travel.vue";
-import { common, vipe, exclusive } from "@/data/main";
+import { econom, buisness, family, taximetr } from "@/data/main";
 </script>
 <template>
   <section class="price__page">
@@ -25,14 +25,15 @@ import { common, vipe, exclusive } from "@/data/main";
           {{ $t("priceDesc") }}
         </p>
         <div class="flex">
-          <PriceCard type_tarif="common" desc="commonDesc" :prices="common" />
+          <PriceCard type_tarif="econom" desc="commonDesc" :prices="econom" />
           <PriceCard
-            type_tarif="exclusive"
-            desc="exclusiveDesc"
-            :prices="exclusive"
+            type_tarif="buisness"
+            desc="buisnessDesc"
+            :prices="buisness"
             class="main__card"
           />
-          <PriceCard type_tarif="vipe" desc="vipeDesc" :prices="vipe" />
+          <PriceCard type_tarif="family" desc="familyDesc" :prices="family" />
+          <PriceCard type_tarif="taximetr" desc="taximetrDesc" :prices="taximetr" />
         </div>
       </div>
     </div>

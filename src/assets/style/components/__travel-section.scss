@@ -48,21 +48,16 @@
         width: 900px;
         height: 470px;
         margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img {
-            width: 100%;
-            height: 100%;
+            width: auto;
+            height: 65%;
         }
 
-        .img_1 {
-            display: block;
-        }
-        .img_3 {
-            display: none;
-        }
-        .img_4{
-            display: none;
-        }
+
     }
 
     @media (max-width:$lg) {
@@ -75,8 +70,8 @@
             margin: 0 auto;
 
             img {
-                width: 100%;
-                height: 100%;
+                width: 800px;
+                height: auto;
             }
         }
 
@@ -87,6 +82,11 @@
         &__img {
             width: 96%;
             height: 460px;
+
+            img {
+                max-width: 700px;
+                width: 100%;
+            }
         }
     }
 
@@ -102,18 +102,11 @@
             width: 100%;
             max-width: 600px;
             height: 410px;
-            overflow: hidden;
 
-            .img_1 {
-                display: none;
-            }
-
-            .img_3 {
-                display: block;
+            img {
                 width: 100%;
-                height: 140%;
-                margin-top: -100px;
             }
+
         }
     }
 
@@ -121,36 +114,16 @@
         &__img {
             max-width: 600px;
             height: 300px;
-            overflow: hidden;
 
-            .img_1 {
-                display: none;
-            }
-            .img_3 {
-                display: none;
-            }
-            .img_4{
-                width: 95%;
-                height:150%;
-                margin-top: -70px;
-                display: block;
-            }
+
+
         }
     }
+
     @media (max-width:500px) {
         &__img {
-
-            .img_1 {
-                display: none;
-            }
-
-            .img_3 {
-                display: none;
-            }
-            .img_4 {
+            img {
                 width: 100%;
-                height: 130%;
-                margin-top: -30px;
             }
         }
     }

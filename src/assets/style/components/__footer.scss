@@ -76,6 +76,14 @@
             margin-bottom: 170px;
 
             li {
+
+                &:nth-child(1) {
+                    a {
+                        max-width: 300px;
+                        word-break: keep-all;
+                    }
+                }
+
                 h5 {
                     color: #fff;
                     text-align: center;
@@ -97,6 +105,8 @@
                     max-width: 180px;
                     margin: 0 auto;
                 }
+
+
             }
         }
 

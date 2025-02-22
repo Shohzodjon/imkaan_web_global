@@ -17,9 +17,10 @@ import TestimonialCard from "@/components/card/TestimonialCard.vue";
 import {
   testimonialList,
   progressData,
-  common,
-  exclusive,
-  vipe,
+  econom,
+  buisness,
+  family,
+  taximetr,
 } from "@/data/main";
 
 const device = useDeviceType();
@@ -118,9 +119,7 @@ const resetPosition = () => {
             </template>
             <template #footer>
               <ul class="payment__list">
-                <li><i class="bi bi-credit-card"></i> <span> UzCard</span></li>
-                <li><i class="bi bi-credit-card"></i> <span>Payme</span></li>
-                <li><i class="bi bi-credit-card"></i> <span>Humo</span></li>
+                <li><i class="bi bi-credit-card"></i> <span> Stripe</span></li>
               </ul>
             </template>
           </InvateCard>
@@ -177,7 +176,10 @@ const resetPosition = () => {
       </div>
     </div>
 
-    <div class="service" :class="directionStore.direct == 'rtl' ? 'service__rtl' : ''">
+    <div
+      class="service"
+      :class="directionStore.direct == 'rtl' ? 'service__rtl' : ''"
+    >
       <div class="container">
         <div class="flex">
           <div class="left">
@@ -216,7 +218,10 @@ const resetPosition = () => {
       </div>
     </div>
     <!-- service -->
-    <div class="progress" :class="directionStore.direct=='rtl'?'rtl__progress':''">
+    <div
+      class="progress"
+      :class="directionStore.direct == 'rtl' ? 'rtl__progress' : ''"
+    >
       <div class="container">
         <div class="flex">
           <div class="left">
@@ -269,18 +274,18 @@ const resetPosition = () => {
 
         <div class="flex">
           <PriceCard
-            type_tarif="common"
-            desc="commonDesc"
-            :prices="common"
+            type_tarif="econom"
+            :prices="econom"
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1000"
             data-aos-delay="300"
+            desc="commonDesc"
           />
           <PriceCard
-            type_tarif="exclusive"
-            desc="exclusiveDesc"
-            :prices="exclusive"
+            type_tarif="buisness"
+            :prices="buisness"
+            desc="buisnessDesc"
             class="main__card"
             data-aos="fade-down"
             data-aos-easing="linear"
@@ -288,9 +293,18 @@ const resetPosition = () => {
             data-aos-delay="500"
           />
           <PriceCard
-            type_tarif="vipe"
-            desc="vipeDesc"
-            :prices="vipe"
+            type_tarif="family"
+            :prices="family"
+            desc="familyDesc"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+            data-aos-delay="700"
+          />
+          <PriceCard
+            type_tarif="taximetr"
+            :prices="taximetr"
+            desc="taximetrDesc"
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1000"

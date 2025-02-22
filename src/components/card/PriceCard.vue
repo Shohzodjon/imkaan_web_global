@@ -28,7 +28,7 @@ const directionStore = useDirection();
   <div class="card" :class="directionStore.direct == 'rtl' ? 'rtl' : ''">
     <div class="card__header">
       <div class="header__btn">{{ $t(type_tarif) }}</div>
-      <p>{{ $t(desc) }}</p>
+      <p v-if="desc">{{ $t(desc) }}</p>
     </div>
 
     <div class="line"></div>
@@ -37,7 +37,7 @@ const directionStore = useDirection();
         <h5>{{ $t(item.type) }}</h5>
         <div>
           <span>{{ item.price }}</span>
-          <span v-if="item.show">{{ $t("currency") }}</span>
+          <span v-if="item.show"> AED</span>
           <span v-else="item.show">{{ $t("time") }}</span>
         </div>
       </li>

@@ -14,35 +14,38 @@ const directionStore = useDirection();
         <h2>
           {{ $t("footerTopTitle") }}
         </h2>
-        <a href="tel:+998557021122">
+        <a href="tel:+971503768496">
           <span>
             <i class="bi bi-telephone-fill"></i>
           </span>
-          <span>+998 55 702 11 22</span>
+          <span>+971 50 376 8496</span>
         </a>
       </div>
     </section>
     <!-- end of top -->
-    <section class="footer__bottom" :class="directionStore.direct == 'rtl' ? 'rtl' : ''">
+    <section
+      class="footer__bottom"
+      :class="directionStore.direct == 'rtl' ? 'rtl' : ''"
+    >
       <div class="container">
         <ul class="list">
           <li>
             <h5>{{ $t("addressLabel") }}</h5>
             <a
-              href="https://www.google.com/maps?q=39.66939612999721, 66.93576949599789"
+              href="https://www.google.com/maps?q=24.49150833568747, 54.35695452883563"
               target="_blank"
               >{{ $t("addressVal") }}</a
             >
           </li>
           <li>
             <h5>{{ $t("communication") }}</h5>
-            <a href="mailto:info@imkaan.uz">info@imkaan.uz</a>
-            <a href="tel:+998557021122">+99855 702 11 22</a>
+            <a href="mailto:info@imkaan.ae">info@imkaan.ae</a>
+            <a href="tel:+971503768496">+971 50 376 8496</a>
           </li>
           <li>
             <h5>{{ $t("center") }}</h5>
             <a href="#">{{ $t("helpCenter") }}</a>
-            <a href="tel:+998557021122">+99855 702 11 22</a>
+            <a href="tel:+971503768496">+971 50 376 8496</a>
           </li>
           <li>
             <h5>{{ $t("openTime") }}</h5>

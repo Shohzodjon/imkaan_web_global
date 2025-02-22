@@ -14,7 +14,7 @@ const directionStore = useDirection();
         <span>
           {{ $t("callCenter") }}
         </span>
-        <a href="tel:+998557021122"> +998 55 702 11 22</a>
+        <a href="tel:+971503768496"> +971 50 376 8496</a>
       </div>
     </div>
   </div>

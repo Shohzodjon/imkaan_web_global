@@ -12,4 +12,4 @@ app.use(createPinia())
 app.use(router);
 app.use($i18n);
 AOS.init();
-app.mount('#app')
+app.mount('#app');

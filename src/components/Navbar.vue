@@ -34,25 +34,27 @@ onMounted(changeLanguage);
 </script>
 <template>
   <nav class="nav">
-    {{ lang }}
     <div class="nav__top" :class="directionStore.direct == 'rtl' ? 'rtl' : ''">
       <div class="container">
         <div class="flex">
           <div class="left">
-            <a href="mailto:info@imkaan.uz">
+            <a href="mailto:info@imkaan.ae">
               <i class="bi bi-envelope-fill"></i>
-              <span>info@imkaan.uz</span>
+              <span>info@imkaan.ae</span>
             </a>
-            <a href="tel:+998557021122" target="_blank">
+            <a href="tel:+971503768496" target="_blank">
               <i class="bi bi-telephone-fill"></i>
-              <span>+998 55 702 11 22 </span>
+              <span>+971 50 376 8496 </span>
             </a>
           </div>
           <p v-html="$t('nav_top')"></p>
         </div>
       </div>
     </div>
-    <div class="nav__bottom" :class="directionStore.direct == 'rtl' ? 'rtl' : ''">
+    <div
+      class="nav__bottom"
+      :class="directionStore.direct == 'rtl' ? 'rtl' : ''"
+    >
       <div class="container">
         <div class="flex">
           <RouterLink to="/" class="logo">

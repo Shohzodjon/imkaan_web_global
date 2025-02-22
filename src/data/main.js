@@ -4,13 +4,13 @@ import img3 from '@/assets/images/2023/12/testimonial-3.jpg';
 import img4 from '@/assets/images/2023/12/testimonial-4.jpg';
 import partnerOne from "@/assets/images/2024/09/partner-1.png";
 
-export const navList=[
+export const navList = [
     { path: "/", name: "home" },
     { path: "/about", name: "about" },
     { path: "/services", name: "ourService" },
     { path: "/price", name: "price" },
     { path: "/driver", name: "driver" },
-  ];
+];
 export const testimonialList = [
     {
         img: img1,
@@ -48,117 +48,7 @@ export const progressData = [
     { label: "easyOrder", value: 86 },
 ];
 
-export const common = [
-    {
-        type: "beginner",
-        price: "1500",
-        show: true,
-    },
-    {
-        type: "minium",
-        price: "3400",
-        show: true,
-    },
-    {
-        type: "insideCity",
-        price: "800",
-        show: true,
-    },
-    {
-        type: "outsideCity",
-        price: "2100",
-        show: true,
-    },
-    {
-        type: "wait",
-        price: "500",
-        show: true,
-    },
-    {
-        type: "waitWay",
-        price: "550",
-        show: true,
-    },
-    {
-        type: "freeWait",
-        price: "3",
-        show: false,
-    },
-];
-export const exclusive = [
-    {
-        type: "beginner",
-        price: "2000",
-        show: true,
-    },
-    {
-        type: "minium",
-        price: "4500",
-        show: true,
-    },
-    {
-        type: "insideCity",
-        price: "1900",
-        show: true,
-    },
-    {
-        type: "outsideCity",
-        price: "3900",
-        show: true,
-    },
-    {
-        type: "wait",
-        price: "600",
-        show: true,
-    },
-    {
-        type: "waitWay",
-        price: "650",
-        show: true,
-    },
-    {
-        type: "freeWait",
-        price: "3",
-        show: false,
-    },
-];
-export const vipe = [
-    {
-        type: "beginner",
-        price: "6000",
-        show: true,
-    },
-    {
-        type: "minium",
-        price: "15000",
-        show: true,
-    },
-    {
-        type: "insideCity",
-        price: "3900",
-        show: true,
-    },
-    {
-        type: "outsideCity",
-        price: "6150",
-        show: true,
-    },
-    {
-        type: "wait",
-        price: "500",
-        show: true,
-    },
-    {
-        type: "waitWay",
-        price: "800",
-        show: true,
-    },
-    {
-        type: "freeWait",
-        price: "3",
-        show: false,
-    },
-];
+
 
 export const convinentList = [
     { title: "confortablePrice", id: 1 },
@@ -247,23 +137,172 @@ export const faqList = [
 
 export const steps = [
     {
-      title: "entryOrder",
-      description: "entryOrderDesc",
-      icon: "bi bi-clipboard-check",
+        title: "entryOrder",
+        description: "entryOrderDesc",
+        icon: "bi bi-clipboard-check",
     },
     {
-      title: "driverFinding",
-      description: "driverFindingDesc",
-      icon: "bi bi-car-front-fill",
+        title: "driverFinding",
+        description: "driverFindingDesc",
+        icon: "bi bi-car-front-fill",
     },
     {
-      title: "enjoyTrip",
-      description: "enjoyTripDesc",
-      icon: "bi bi-globe-europe-africa",
+        title: "enjoyTrip",
+        description: "enjoyTripDesc",
+        icon: "bi bi-globe-europe-africa",
     },
     {
-      title: "serviceFee",
-      description: "serviceFeeDesc",
-      icon: "bi bi-credit-card-2-front",
+        title: "serviceFee",
+        description: "serviceFeeDesc",
+        icon: "bi bi-credit-card-2-front",
     },
-  ];
+];
+
+export const econom = [
+    {
+        type: "beginner",
+        price: "3",
+        show: true,
+    },
+    {
+        type: "minium",
+        price: "5",
+        show: true,
+    },
+    {
+        type: "insideCity",
+        price: "1.85",
+        show: true,
+    },
+    {
+        type: "outsideCity",
+        price: "1.85",
+        show: true,
+    },
+    {
+        type: "wait",
+        price: "1",
+        show: true,
+    },
+    {
+        type: "waitWay",
+        price: "1",
+        show: true,
+    },
+    {
+        type: "freeWait",
+        price: "3",
+        show: false,
+    },
+];
+export const buisness = [
+    {
+        type: "beginner",
+        price: "6",
+        show: true,
+    },
+    {
+        type: "minium",
+        price: "10",
+        show: true,
+    },
+    {
+        type: "insideCity",
+        price: "2.45",
+        show: true,
+    },
+    {
+        type: "outsideCity",
+        price: "2.45",
+        show: true,
+    },
+    {
+        type: "wait",
+        price: "1.5",
+        show: true,
+    },
+    {
+        type: "waitWay",
+        price: "1.5",
+        show: true,
+    },
+    {
+        type: "freeWait",
+        price: "3",
+        show: false,
+    },
+];
+export const family = [
+    {
+        type: "beginner",
+        price: "9",
+        show: true,
+    },
+    {
+        type: "minium",
+        price: "9",
+        show: true,
+    },
+    {
+        type: "insideCity",
+        price: "2.6",
+        show: true,
+    },
+    {
+        type: "outsideCity",
+        price: "2.6",
+        show: true,
+    },
+    {
+        type: "wait",
+        price: "1",
+        show: true,
+    },
+    {
+        type: "waitWay",
+        price: "1",
+        show: true,
+    },
+    {
+        type: "freeWait",
+        price: "3",
+        show: false,
+    },
+];
+export const taximetr = [
+    {
+        type: "beginner",
+        price: "18",
+        show: true,
+    },
+    {
+        type: "minium",
+        price: "18",
+        show: true,
+    },
+    {
+        type: "insideCity",
+        price: "2.5",
+        show: true,
+    },
+    {
+        type: "outsideCity",
+        price: "2.5",
+        show: true,
+    },
+    {
+        type: "wait",
+        price: "1",
+        show: true,
+    },
+    {
+        type: "waitWay",
+        price: "1",
+        show: true,
+    },
+    {
+        type: "freeWait",
+        price: "3",
+        show: false,
+    },
+];
