@@ -301,7 +301,7 @@ const resetPosition = () => {
             data-aos-duration="1000"
             data-aos-delay="700"
           />
-          <PriceCard
+          <!-- <PriceCard
             type_tarif="taximetr"
             :prices="taximetr"
             desc="taximetrDesc"
@@ -309,7 +309,7 @@ const resetPosition = () => {
             data-aos-easing="linear"
             data-aos-duration="1000"
             data-aos-delay="700"
-          />
+          /> -->
         </div>
       </div>
     </div>

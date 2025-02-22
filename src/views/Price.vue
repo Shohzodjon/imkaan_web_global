@@ -33,7 +33,7 @@ import { econom, buisness, family, taximetr } from "@/data/main";
             class="main__card"
           />
           <PriceCard type_tarif="family" desc="familyDesc" :prices="family" />
-          <PriceCard type_tarif="taximetr" desc="taximetrDesc" :prices="taximetr" />
+          <!-- <PriceCard type_tarif="taximetr" desc="taximetrDesc" :prices="taximetr" /> -->
         </div>
       </div>
     </div>

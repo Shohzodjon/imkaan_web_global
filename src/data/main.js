@@ -240,7 +240,7 @@ export const family = [
     },
     {
         type: "minium",
-        price: "9",
+        price: "50",
         show: true,
     },
     {

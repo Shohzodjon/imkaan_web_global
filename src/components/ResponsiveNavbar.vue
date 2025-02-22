@@ -84,6 +84,8 @@ const handleClick = () => {
         font-size: 18px;
         color: #1b2430;
         font-weight: 500;
+        letter-spacing: 2.5px;
+        // word-spacing: 2px;
       }
       .active {
         color: #00b9ff;
