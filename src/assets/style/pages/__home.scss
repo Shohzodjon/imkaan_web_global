@@ -78,7 +78,7 @@
                 justify-content: center;
 
                 img {
-                    width:360px;
+                    width: 360px;
                     height: 549px;
                     transform-style: preserve-3d;
                     will-change: transform;
@@ -440,15 +440,18 @@
                 }
             }
         }
+
         .modal {
             left: 0;
 
-            h2,p {
+            h2,
+            p {
                 text-align: right;
             }
-             a{
-             display: block;
-             text-align: right;
+
+            a {
+                display: block;
+                text-align: right;
             }
 
         }
@@ -476,8 +479,8 @@
         }
 
         .flex {
-           display: grid;
-           grid-template-columns: repeat(3,1fr);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             row-gap: 50px;
             margin-top: 30px;
@@ -583,7 +586,7 @@
     // end of $xl
     @media (max-width:$lg) {
         header {
-            height: 880px;
+            height: 1100px;
             background-size: cover;
 
             .flex {
@@ -654,9 +657,10 @@
         .service__type {
             padding: 100px 0;
         }
+
         .testimonial {
-         height: 670px;
-            padding-bottom: 0px; 
+            height: 670px;
+            padding-bottom: 0px;
         }
     }
 
@@ -665,6 +669,7 @@
     @media (max-width:$md) {
         header {
             padding-bottom: 50px;
+            height: 920px;
             @include flex(row, flex-end, center);
 
             .flex {
@@ -838,6 +843,7 @@
                 right: 1%;
             }
         }
+
         .rtl__progress {
             &::after {
                 right: 0;
@@ -865,7 +871,7 @@
     @media (max-width:$xs) {
         header {
             padding-bottom: 50px;
-
+            height: 900px;
             @include flex(row, flex-end, center);
 
             .flex {
@@ -903,7 +909,7 @@
                     justify-content: center;
 
                     img {
-                        width:360px;
+                        width: 360px;
                         height: 540px;
                     }
                 }
@@ -940,6 +946,7 @@
         .service__type {
             padding: 60px 0;
         }
+
         .testimonial {
             height: 600px
         }
@@ -950,7 +957,7 @@
     @media (max-width:$sm) {
         header {
             padding-bottom: 50px;
-            height: 800px;
+            height: 850px;
 
             .flex {
                 .info {
@@ -1004,6 +1011,7 @@
 
             }
         }
+
         .testimonial {
             height: 560px
         }
@@ -1011,7 +1019,7 @@
 
     @media (max-width:440px) {
         header {
-            height: 800px;
+            height: 820px;
 
             .flex {
 
