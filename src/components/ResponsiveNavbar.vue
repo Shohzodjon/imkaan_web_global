@@ -78,7 +78,8 @@ const handleClick = () => {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
+    border: 1px solid red;
     li {
       a {
         font-size: 18px;
@@ -112,7 +113,6 @@ const handleClick = () => {
   }
   ul {
     padding: 10px 20px 20px;
-    gap: 6px;
     li {
       a {
         font-size: 16px;

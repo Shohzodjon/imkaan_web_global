@@ -74,7 +74,7 @@ defineProps({
     }
   }
   @media (max-width: 640px) {
-    padding: 20px 20px 10px;
+    padding: 30px 20px 10px;
   }
 }
 </style>

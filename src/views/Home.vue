@@ -89,7 +89,7 @@ const resetPosition = () => {
             data-aos="fade-down"
           >
             <img
-              src="@/assets/images/2024/09/phone1-1.png"
+              src="@/assets/images/imkaan.png"
               alt="phone"
               ref="imageRef"
             />

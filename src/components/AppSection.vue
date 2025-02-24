@@ -11,7 +11,7 @@ const directionStore = useDirection();
       <div class="flex">
         <div class="left">
           <div class="img__wrapper">
-            <img src="@/assets/images/2024/09/phone-2.png" alt="mobile" />
+            <img src="@/assets/images/imkaan.ae.png" alt="mobile" />
           </div>
         </div>
         <div class="right">
