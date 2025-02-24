@@ -79,7 +79,6 @@ const handleClick = () => {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border: 1px solid red;
     li {
       a {
         font-size: 18px;
