@@ -78,12 +78,20 @@
                 justify-content: center;
 
                 img {
-                    width: 360px;
-                    height: 549px;
+                    width: 430px;
+                    height: 530px;
                     transform-style: preserve-3d;
                     will-change: transform;
                     transition: transform 0.1s ease;
                 }
+
+                &:hover {
+                    img {
+                        transform: translateY(-10px);
+                    }
+                }
+
+
             }
         }
 
@@ -564,7 +572,6 @@
                     }
                 }
 
-
             }
 
         }
@@ -586,11 +593,13 @@
     // end of $xl
     @media (max-width:$lg) {
         header {
-            height: 1100px;
+            height: 1000px;
             background-size: cover;
+            padding-top: 150px;
 
             .flex {
                 flex-direction: column !important;
+                gap: 40px;
 
                 .info {
                     width: 100%;
@@ -632,7 +641,7 @@
 
                 .img__box {
                     img {
-                        width: 360px;
+                        width: 455px;
                         height: 530px;
                     }
                 }
@@ -674,7 +683,7 @@
 
             .flex {
                 @include flex(column, center, space-between);
-                gap: 20px;
+                gap: 30px;
 
                 .info {
                     width: 100%;
@@ -711,8 +720,8 @@
                     justify-content: center;
 
                     img {
-                        width: 370px;
-                        height: 530px;
+                        width: 440px;
+                        height: 520px;
                     }
                 }
             }
@@ -909,8 +918,8 @@
                     justify-content: center;
 
                     img {
-                        width: 360px;
-                        height: 540px;
+                        width: 445px;
+                        height: 530px;
                     }
                 }
             }
@@ -983,8 +992,8 @@
                 .img__box {
                     img {
                         width: 100%;
-                        max-width: 330px;
-                        height: 500px;
+                        max-width: 430px;
+                        height: 510px;
                     }
                 }
             }
@@ -1028,8 +1037,8 @@
                     overflow: hidden;
 
                     img {
-                        max-width: 310px;
-                        height: 480px;
+                        max-width: 420px;
+                        height: 500px;
                         width: 100%;
                     }
                 }
@@ -1039,6 +1048,28 @@
 
     }
 
+    @media (max-width:420px) {
+        header {
+
+
+            .flex {
+
+                .img__box {
+                    width: 100%;
+                    overflow: hidden;
+
+                    img {
+                        width: 410px;
+                        height: 500px;
+                        margin-left: -10%;
+                        margin-right: -10%;
+                    }
+                }
+            }
+
+        }
+
+    }
 }
 
 @keyframes ripple {

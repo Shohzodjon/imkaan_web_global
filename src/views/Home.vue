@@ -39,32 +39,33 @@ const handleScroll = () => {
   const rect = progressSection.value.getBoundingClientRect();
   isVisible.value = rect.top < window.innerHeight && rect.bottom >= 0;
 };
-const handleMouseMove = (e) => {
-  const container = e.currentTarget.getBoundingClientRect();
-  const centerX = container.left + container.width / 2;
-  const centerY = container.top + container.height / 2;
+// const handleMouseMove = (e) => {
+//   const container = e.currentTarget.getBoundingClientRect();
+//   const centerX = container.left + container.width / 2;
+//   const centerY = container.top + container.height / 2;
 
-  const x = ((e.clientX - centerX) / container.width) * 80;
-  const y = -((e.clientY - centerY) / container.height) * 80;
+//   const x = ((e.clientX - centerX) / container.width) * 50;
+//   const y = -((e.clientY - centerY) / container.height) * 30;
 
-  if (imageRef.value) {
-    imageRef.value.style.transition = "transform 0.1s ease";
-    imageRef.value.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
-  }
-};
-const resetPosition = () => {
-  if (imageRef.value) {
-    imageRef.value.style.transition = "transform 0.5s ease";
-    imageRef.value.style.transform = "rotateX(0deg) rotateY(0deg)";
-  }
-};
+//   if (imageRef.value) {
+//     imageRef.value.style.transition = "transform 0.1s ease";
+//     imageRef.value.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+//   }
+// };
+// const resetPosition = () => {
+//   if (imageRef.value) {
+//     imageRef.value.style.transition = "transform 0.5s ease";
+//     imageRef.value.style.transform = "rotateX(0deg) rotateY(0deg)";
+//   }
+// };
 </script>
 <template>
   <section class="home">
     <header :class="directionStore.direct == 'rtl' ? 'head__rtl' : ''">
       <div class="container">
         <div class="flex">
-          <div class="info" data-aos="fade-down">
+          <!-- data-aos="fade-down" -->
+          <div class="info">
             <h4>{{ $t("headerSubtitle") }}</h4>
             <h2>{{ $t("headerTitle") }}</h2>
             <div class="btn_group">
@@ -82,17 +83,11 @@ const resetPosition = () => {
               ></a>
             </div>
           </div>
-          <div
-            class="img__box"
-            @mousemove="handleMouseMove"
+          <!--   @mousemove="handleMouseMove"
             @mouseleave="resetPosition"
-            data-aos="fade-down"
-          >
-            <img
-              src="@/assets/images/imkaan.png"
-              alt="phone"
-              ref="imageRef"
-            />
+            data-aos="fade-down" -->
+          <div class="img__box">
+            <img src="@/assets/images/imkaan.ae_2.png" alt="phone" ref="imageRef" />
           </div>
         </div>
       </div>
@@ -104,16 +99,12 @@ const resetPosition = () => {
         <p class="desc">
           {{ $t("offerDesc") }}
         </p>
-        <div class="flex">
-          <InvateCard
-            title="allPayment"
-            desc="paymentDesc"
-            class="item__one"
-            data-aos="fade-down"
+        <!-- data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1000"
-            data-aos-delay="300"
-          >
+            data-aos-delay="300" -->
+        <div class="flex">
+          <InvateCard title="allPayment" desc="paymentDesc" class="item__one">
             <template #icon>
               <i class="bi bi-cash-coin"></i>
             </template>
@@ -123,15 +114,13 @@ const resetPosition = () => {
               </ul>
             </template>
           </InvateCard>
-          <InvateCard
-            title="security"
-            desc="securityDesc"
-            class="item__two"
-            data-aos="fade-down"
+          <!-- 
+              data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1000"
             data-aos-delay="500"
-          >
+          -->
+          <InvateCard title="security" desc="securityDesc" class="item__two">
             <template #icon>
               <i class="bi bi-shield-shaded"></i>
             </template>
@@ -148,14 +137,13 @@ const resetPosition = () => {
               </ul>
             </template>
           </InvateCard>
-          <InvateCard
-            title="onlineService"
-            desc="onlineServiceDesc"
-            data-aos="fade-down"
+          <!-- 
+             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1000"
             data-aos-delay="800"
-          >
+          -->
+          <InvateCard title="onlineService" desc="onlineServiceDesc">
             <template #icon>
               <i class="bi bi-phone-flip"></i>
             </template>
@@ -271,45 +259,27 @@ const resetPosition = () => {
         <p class="desc">
           {{ $t("ourTaxiServiceDesc") }}
         </p>
-
-        <div class="flex">
-          <PriceCard
-            type_tarif="econom"
-            :prices="econom"
-            data-aos="fade-down"
+        <!--  data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1000"
-            data-aos-delay="300"
-            desc="commonDesc"
-          />
+            data-aos-delay="300" -->
+        <div class="flex">
+          <PriceCard type_tarif="econom" :prices="econom" desc="commonDesc" />
+          <!--    data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+            data-aos-delay="500" -->
           <PriceCard
             type_tarif="buisness"
             :prices="buisness"
             desc="buisnessDesc"
             class="main__card"
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-            data-aos-delay="500"
           />
-          <PriceCard
-            type_tarif="family"
-            :prices="family"
-            desc="familyDesc"
-            data-aos="fade-down"
+          <!--  data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1000"
-            data-aos-delay="700"
-          />
-          <!-- <PriceCard
-            type_tarif="taximetr"
-            :prices="taximetr"
-            desc="taximetrDesc"
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-            data-aos-delay="700"
-          /> -->
+            data-aos-delay="700" -->
+          <PriceCard type_tarif="family" :prices="family" desc="familyDesc" />
         </div>
       </div>
     </div>
